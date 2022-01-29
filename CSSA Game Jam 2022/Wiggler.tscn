@@ -1,0 +1,23 @@
+[gd_scene format=2]
+
+[node name="Wiggler" type="Spatial"]
+
+[node name="NorthSide" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1.05, 1.025, 0, 0 )
+width = 0.05
+
+[node name="SouthSide" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1.05, -1.025, 0, 0 )
+width = 0.05
+
+[node name="EastSide" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 1.025 )
+depth = 0.05
+
+[node name="WestSide" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, -1.025 )
+depth = 0.05
+
+[node name="BottomText" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.475, 0 )
+height = 0.05
