@@ -40,4 +40,7 @@ shape = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0 )
 
 [node name="DraggableTable" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4156, 1.86359, 0.79412 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4156, 1.75148, 0.79412 )
+
+[node name="DraggableTable2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3875, 1.79698, -2.34519 )
