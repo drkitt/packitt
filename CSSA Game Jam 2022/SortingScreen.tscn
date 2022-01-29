@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=1]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Wiggler.tscn" type="PackedScene" id=3]
 [ext_resource path="res://draggables/Table.tscn" type="PackedScene" id=4]
+[ext_resource path="res://draggables/Burger.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -41,3 +42,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0 )
 
 [node name="DraggableTable" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4156, 1.86359, 0.79412 )
+
+[node name="Burger" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.40124, 1.67193, 1.81821 )
