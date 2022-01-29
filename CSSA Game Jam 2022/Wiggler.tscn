@@ -4,6 +4,7 @@
 
 [node name="Lid" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04998, 0.499084, 0 )
+visible = false
 
 [node name="TopText" type="CSGBox" parent="Lid"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04993, 0.0251799, 0 )
@@ -13,20 +14,25 @@ depth = 2.09902
 
 [node name="NorthSide" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1.05, 1.025, 0, 0 )
+use_collision = true
 width = 0.05
 
 [node name="SouthSide" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1.05, -1.025, 0, 0 )
+use_collision = true
 width = 0.05
 
 [node name="EastSide" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 1.025 )
+use_collision = true
 depth = 0.05
 
 [node name="WestSide" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, -1.025 )
+use_collision = true
 depth = 0.05
 
 [node name="BottomText" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.475, 0 )
+use_collision = true
 height = 0.05
