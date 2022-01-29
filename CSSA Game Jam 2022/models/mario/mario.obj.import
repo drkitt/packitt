@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/mario.obj-6b24310a2e03df12dcee9f946ab7d24e.mesh"
+
+[deps]
+
+files=[ "res://.import/mario.obj-6b24310a2e03df12dcee9f946ab7d24e.mesh" ]
+
+source_file="res://models/mario/mario.obj"
+dest_files=[ "res://.import/mario.obj-6b24310a2e03df12dcee9f946ab7d24e.mesh", "res://.import/mario.obj-6b24310a2e03df12dcee9f946ab7d24e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

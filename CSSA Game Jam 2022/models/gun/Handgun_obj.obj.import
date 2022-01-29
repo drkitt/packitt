@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Handgun_obj.obj-d521e1f377a4ad889e9a0b55e25ff83f.mesh"
+
+[deps]
+
+files=[ "res://.import/Handgun_obj.obj-d521e1f377a4ad889e9a0b55e25ff83f.mesh" ]
+
+source_file="res://models/gun/Handgun_obj.obj"
+dest_files=[ "res://.import/Handgun_obj.obj-d521e1f377a4ad889e9a0b55e25ff83f.mesh", "res://.import/Handgun_obj.obj-d521e1f377a4ad889e9a0b55e25ff83f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
