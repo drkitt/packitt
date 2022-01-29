@@ -7,5 +7,4 @@ func _ready():
 
 
 func _on_Draggable_drag_move(_node, cast):
-	print(cast['position'])
 	set_translation(cast['position'])
