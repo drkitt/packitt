@@ -40,7 +40,7 @@ func mouse_entered(node):
 
 func mouse_exited(node):
 	hovered = null
-	
+
 func on_hover(cast):
 	emit_signal("drag_move", self, cast)
 
