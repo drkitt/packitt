@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="CSSA Game Jam 2022"
+config/name="Packitt"
 run/main_scene="res://SortingScreen.tscn"
 config/icon="res://icon.png"
 
