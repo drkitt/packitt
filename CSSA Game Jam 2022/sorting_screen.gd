@@ -31,3 +31,12 @@ func _on_Area_body_entered(body):
 		score -= 1
 		print(score)
 		fell.append(body)
+
+
+func _on_ReplayButton_pressed():
+	var result = get_tree().change_scene("res://SortingScreen.tscn")
+	match result:
+		ERR_CANT_OPEN:
+			print_debug("Could not open sorting screen")
+		ERR_CANT_CREATE:
+			print_debug("Could not instantiate sorting screen")
