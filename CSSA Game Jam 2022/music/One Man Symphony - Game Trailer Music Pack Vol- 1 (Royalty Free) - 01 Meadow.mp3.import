@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/One Man Symphony - Game Trailer Music Pack Vol- 1 (Royalty Free) - 01 Meadow.mp3-cfb03a0c6983a564ef8c9dbc117063a3.mp3str"
+
+[deps]
+
+source_file="res://music/One Man Symphony - Game Trailer Music Pack Vol- 1 (Royalty Free) - 01 Meadow.mp3"
+dest_files=[ "res://.import/One Man Symphony - Game Trailer Music Pack Vol- 1 (Royalty Free) - 01 Meadow.mp3-cfb03a0c6983a564ef8c9dbc117063a3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

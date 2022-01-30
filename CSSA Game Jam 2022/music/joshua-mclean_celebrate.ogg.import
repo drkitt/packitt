@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/joshua-mclean_celebrate.ogg-434cb125aee78e85073f793757f74777.oggstr"
+
+[deps]
+
+source_file="res://music/joshua-mclean_celebrate.ogg"
+dest_files=[ "res://.import/joshua-mclean_celebrate.ogg-434cb125aee78e85073f793757f74777.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
