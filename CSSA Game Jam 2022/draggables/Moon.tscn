@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=1]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=2]
+[ext_resource path="res://models/moon/Diffuse_2K.png" type="Texture" id=3]
+[ext_resource path="res://models/moon/Moon 2K.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.439632
+
+[node name="Moon" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="Moon 2K" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.441, 0 )
+mesh = ExtResource( 4 )
+material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.441, 0 )
+shape = SubResource( 2 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 1 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]

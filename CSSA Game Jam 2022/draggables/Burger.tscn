@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=1]
+[ext_resource path="res://models/burger/burger.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=3]
+[ext_resource path="res://models/burger/burger.png" type="Texture" id=4]
+[ext_resource path="res://models/burger/burger_normal.png" type="Texture" id=5]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 4 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 5 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 3.27068, 2.02525, 3.29068 )
+
+[node name="Burger" type="Spatial"]
+transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 3 )
+
+[node name="burger" type="MeshInstance" parent="RigidBody"]
+mesh = ExtResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25776, 0 )
+shape = SubResource( 2 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
