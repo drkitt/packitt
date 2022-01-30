@@ -38,7 +38,7 @@ extents = Vector3( 0.500198, 0.49684, 0.499274 )
 environment = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.2898, 0.957087, 0, -0.957087, 0.2898, 0, 6.30908, 1.96683 )
+transform = Transform( 1, 0, 0, 0, 0.2898, 0.957087, 0, -0.957087, 0.2898, -0.00447798, 5.89643, 1.96683 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.37187, 0.928285, 0, -0.928285, 0.37187, -0.187853, 4.70082, 3.69517 )
@@ -56,49 +56,49 @@ transform = Transform( 0.66, 0, 0, 0, 0.493, 0, 0, 0, 0.661, 0, 0.226, 0 )
 shape = SubResource( 3 )
 
 [node name="Wiggler" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0.545811 )
 
 [node name="DraggableTable" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4156, 1.86359, 0.79412 )
 
 [node name="Burger" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.40124, 1.67193, 1.81821 )
+transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.45963, 1.67193, 2.46854 )
 
 [node name="Dennis" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82916, 1.76569, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84847, 1.76569, -1.69726 )
 
 [node name="Dogy" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30168, 1.82129, 0 )
 
 [node name="Eye" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6622, 1.96695, -0.54583 )
+transform = Transform( 1, 0, 0, 0, 0.638808, 0.769366, 0, -0.769366, 0.638808, 1.6622, 1.96695, -0.54583 )
 
 [node name="FireExtinguisher" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86556, 1.77422, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72822, 1.77422, -0.969478 )
 
 [node name="Laptop" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51378, 1.72568, -1.01395 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.39767, 1.72568, 1.63769 )
 
 [node name="GUN" parent="." instance=ExtResource( 11 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 1.46284, 1.78027, 1.8362 )
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -0.990536, 1.78027, -2.04589 )
 
 [node name="Mario" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.440095, 1.72967, 1.93328 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32181, 1.72967, -1.59967 )
 
 [node name="Moon" parent="." instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.819024, 1.66069, 1.99499 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.345966, 1.66069, 2.42354 )
 
 [node name="Penguin" parent="." instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3931, 1.71388, 1.30317 )
+transform = Transform( 0.999997, 0, 0.00230383, 0, 1, 0, -0.00230383, 0, 0.999997, -2.11474, 1.71388, -0.856503 )
 
 [node name="Waluigi" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72405, 2.48336 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6409, 1.72405, -1.55165 )
 
 [node name="WiiU" parent="." instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62338, 1.73597, 2.48561 )
+transform = Transform( 0.868329, 0, -0.495989, 0, 1, 0, 0.495989, 0, 0.868329, 1.62338, 1.73597, 2.48561 )
 
 [node name="Spoon" parent="." instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869836, 1.78445, 2.49239 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.869836, 1.78445, 2.49239 )
 
 [node name="Sword" parent="." instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69431, 1.75406, 1.81918 )
