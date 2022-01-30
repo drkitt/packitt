@@ -172,6 +172,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ReplayButton" type="Button" parent="UI/EndScreen"]
+margin_right = 211.0
+margin_bottom = 37.0
+text = "Play again"
+
 [node name="Draggables" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.179324, 0 )
 script = ExtResource( 23 )
@@ -242,3 +247,4 @@ size = 2.96731
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="UI/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="UI/StartButton" to="Draggables" method="_on_StartButton_pressed"]
+[connection signal="pressed" from="UI/EndScreen/ReplayButton" to="." method="_on_ReplayButton_pressed"]
