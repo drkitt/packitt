@@ -33,3 +33,4 @@ material/0 = SubResource( 2 )
 material/1 = null
 
 [connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]
