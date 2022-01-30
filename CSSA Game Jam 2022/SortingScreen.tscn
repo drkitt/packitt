@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=1]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://draggables/Burger.tscn" type="PackedScene" id=5]
 [ext_resource path="res://draggables/Dennis.tscn" type="PackedScene" id=6]
 [ext_resource path="res://draggables/Dogy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://draggables/Eye.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -53,3 +54,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82916, 1.76569, 0 )
 
 [node name="Dogy" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30168, 1.82129, 0 )
+
+[node name="Eye" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6622, 1.96695, -0.54583 )
