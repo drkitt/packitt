@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://models/dennis/rp_dennis_posed_004_dif.jpg" type="Texture" id=1]
+[ext_resource path="res://models/dennis/rp_dennis_posed_004_30k.OBJ" type="ArrayMesh" id=2]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=3]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.136694
+height = 0.509117
+
+[node name="Dennis" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 0.004, 0, 0, 0, 0.004, 0, 0, 0, 0.004, 0, 0, 0 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.365272, 0 )
+shape = SubResource( 2 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 4 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]
