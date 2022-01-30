@@ -8,6 +8,9 @@ func _on_StartButton_pressed() -> void:
 	$AudioStreamPlayer.stream = preload("res://music/francis-battle.mp3")
 	$AudioStreamPlayer.volume_db = -15
 	$AudioStreamPlayer.play()
+#	$Trapdoor/CollisionShape.disabled = true
+#	$Trapdoor.queue_free()
+	$Trapdoor.translation.y = -1
 
 
 func _on_Timer_timeout():

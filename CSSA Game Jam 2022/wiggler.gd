@@ -11,4 +11,5 @@ var accumulator: float = 0
 func _process(delta: float) -> void:
 	if wiggling:
 		accumulator += delta
+		$Box.translation.x = amplitude * sin(2 * PI * frequency * accumulator + phase)
 		$Box.translation.y = amplitude * sin(2 * PI * frequency * accumulator + phase)
