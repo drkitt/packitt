@@ -23,6 +23,7 @@ _global_script_class_icons={
 config/name="Packitt"
 run/main_scene="res://title_screen.tscn"
 config/icon="res://pear_icon.png"
+config/macos_native_icon="res://pear_icon.icns"
 config/windows_native_icon="res://pear_icon.ico"
 
 [autoload]
