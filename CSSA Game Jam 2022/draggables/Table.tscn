@@ -11,7 +11,7 @@ extents = Vector3( 0.330296, 0.229742, 0.332307 )
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
 
-[node name="Spatial" type="Spatial"]
+[node name="DraggableTable" type="Spatial"]
 script = ExtResource( 4 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
