@@ -1,6 +1,10 @@
 extends MarginContainer
 
 
+func _ready() -> void:
+	randomize()
+	
+
 func _on_Play_button_pressed() -> void:
 	var result = get_tree().change_scene("res://SortingScreen.tscn")
 	match result:
