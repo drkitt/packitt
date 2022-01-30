@@ -7,7 +7,6 @@ var camera: Camera
 var draging
 
 func _ready():
-	camera = get_tree().get_root().get_camera()
 	set_physics_process(false)
 
 func register_draggable(node):
@@ -17,6 +16,7 @@ func register_draggable(node):
 
 func _drag_start(node):
 	draging = node
+	camera = get_tree().get_root().get_camera()
 	set_physics_process(true)
 
 func _drag_stop(node):

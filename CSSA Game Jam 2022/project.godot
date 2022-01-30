@@ -22,8 +22,8 @@ _global_script_class_icons={
 
 config/name="Packitt"
 config/description="Bad and naughty objects get put in The Packitt Wiggler to atone for their crimes"
-run/main_scene="res://SortingScreen.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://title_screen.tscn"
+config/icon="res://pear_icon.png"
 config/macos_native_icon="res://pear_icon.icns"
 config/windows_native_icon="res://pear_icon.ico"
 

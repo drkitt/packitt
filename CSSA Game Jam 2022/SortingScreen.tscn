@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=1]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://draggables/Spoon.tscn" type="PackedScene" id=18]
 [ext_resource path="res://draggables/Sword.tscn" type="PackedScene" id=19]
 [ext_resource path="res://draggables/UtahTeapot.tscn" type="PackedScene" id=20]
+[ext_resource path="res://sorting_screen.gd" type="Script" id=21]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -36,6 +37,7 @@ extents = Vector3( 0.500198, 0.49684, 0.499274 )
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource( 1 )
+script = ExtResource( 21 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.2898, 0.957087, 0, -0.957087, 0.2898, -0.00447798, 5.89643, 1.96683 )
@@ -56,10 +58,33 @@ transform = Transform( 0.66, 0, 0, 0, 0.493, 0, 0, 0, 0.661, 0, 0.226, 0 )
 shape = SubResource( 3 )
 
 [node name="Wiggler" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0.545811 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0 )
+wiggling = false
 
 [node name="DraggableTable" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4156, 1.86359, 0.79412 )
+
+[node name="UI" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -105.0
+margin_top = -50.0
+margin_right = 106.0
+margin_bottom = -13.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="UI"]
+margin_right = 211.0
+margin_bottom = 37.0
+rect_pivot_offset = Vector2( 105, 20 )
+text = "Confirm packing!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Burger" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 2.45963, 1.67193, 2.46854 )
@@ -105,3 +130,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69431, 1.75406, 1.81918 )
 
 [node name="UtahTeapot" parent="." instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19764, 1.87598, 0.252655 )
+
+[connection signal="pressed" from="UI/Button" to="." method="_on_Button_pressed"]
