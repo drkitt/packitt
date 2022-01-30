@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://wiggler.gd" type="Script" id=1]
+[ext_resource path="res://boxmaterial.tres" type="Material" id=2]
 
 [node name="Wiggler" type="Spatial"]
 script = ExtResource( 1 )
@@ -16,28 +17,34 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04993, 0.0251799, 0 )
 width = 2.09902
 height = 0.05
 depth = 2.09902
+material = ExtResource( 2 )
 
 [node name="NorthSide" type="CSGBox" parent="Box"]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1.05, 1.025, 0, 0 )
 use_collision = true
 width = 0.05
+material = ExtResource( 2 )
 
 [node name="SouthSide" type="CSGBox" parent="Box"]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1.05, -1.025, 0, 0 )
 use_collision = true
 width = 0.05
+material = ExtResource( 2 )
 
 [node name="EastSide" type="CSGBox" parent="Box"]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 1.025 )
 use_collision = true
 depth = 0.05
+material = ExtResource( 2 )
 
 [node name="WestSide" type="CSGBox" parent="Box"]
 transform = Transform( 1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, -1.025 )
 use_collision = true
 depth = 0.05
+material = ExtResource( 2 )
 
 [node name="BottomText" type="CSGBox" parent="Box"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.475, 0 )
 use_collision = true
 height = 0.05
+material = ExtResource( 2 )
