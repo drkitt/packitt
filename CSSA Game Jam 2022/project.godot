@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Packitt"
-run/main_scene="res://SortingScreen.tscn"
+run/main_scene="res://title_screen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

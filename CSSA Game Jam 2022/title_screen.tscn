@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://logo/logo_dark_bg.png" type="Texture" id=1]
+[ext_resource path="res://title_screen.gd" type="Script" id=2]
+[ext_resource path="res://logo/box_dark_bg.png" type="Texture" id=3]
+[ext_resource path="res://ui_wiggler.gd" type="Script" id=4]
+
+[node name="Title screen" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 162.0
+margin_top = 103.0
+margin_right = 862.0
+margin_bottom = 496.0
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 700.0
+margin_bottom = 300.0
+
+[node name="Logo box" type="TextureRect" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_right = 700.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 700, 300 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+script = ExtResource( 4 )
+frequency = 4.0
+amplitude = 2.0
+
+[node name="Logo text" type="TextureRect" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 5.0
+margin_right = 695.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 690, 300 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+frequency = 4.0
+amplitude = 2.0
+phase = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 304.0
+margin_right = 700.0
+margin_bottom = 393.0
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+margin_right = 700.0
+margin_bottom = 45.0
+custom_constants/margin_right = 175
+custom_constants/margin_left = 175
+custom_constants/margin_bottom = 5
+
+[node name="Play button" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+margin_left = 175.0
+margin_right = 525.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 350, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Play"
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/VBoxContainer/VBoxContainer"]
+margin_top = 49.0
+margin_right = 700.0
+margin_bottom = 89.0
+custom_constants/margin_right = 175
+custom_constants/margin_left = 175
+
+[node name="Quit button" type="Button" parent="CenterContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
+margin_left = 175.0
+margin_right = 525.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 350, 40 )
+text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/MarginContainer/Play button" to="." method="_on_Play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/VBoxContainer/MarginContainer2/Quit button" to="." method="_on_Quit_button_pressed"]
