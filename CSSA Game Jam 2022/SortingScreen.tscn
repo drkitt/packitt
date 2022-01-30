@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=1]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://draggables/FireExtinguisher.tscn" type="PackedScene" id=9]
 [ext_resource path="res://models/table/Wood_Table_N.jpg" type="Texture" id=10]
 [ext_resource path="res://draggables/GUN.tscn" type="PackedScene" id=11]
+[ext_resource path="res://draggables/laptop.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -46,9 +47,6 @@ material/1 = null
 transform = Transform( 0.66, 0, 0, 0, 0.493, 0, 0, 0, 0.661, 0, 0.226, 0 )
 shape = SubResource( 3 )
 
-[node name="GUN" parent="Wood_Table" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.146284, 0.580294, 0.122229 )
-
 [node name="Wiggler" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0 )
 
@@ -69,3 +67,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6622, 1.96695, -0.54583 )
 
 [node name="FireExtinguisher" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86556, 1.77422, 0 )
+
+[node name="Laptop" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51378, 1.72568, -1.01395 )
+
+[node name="GUN" parent="." instance=ExtResource( 11 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 1.46284, 1.78027, 1.8362 )
