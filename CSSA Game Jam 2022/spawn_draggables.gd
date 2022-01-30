@@ -11,4 +11,4 @@ func _ready() -> void:
 		$Inactive.remove_child(draggable)
 		add_child(draggable)
 	$Inactive.queue_free()
-		
+
