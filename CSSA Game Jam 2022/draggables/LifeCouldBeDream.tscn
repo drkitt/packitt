@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/mario/mario.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=2]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=3]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.248046
+height = 0.945176
+
+[node name="Mario" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="mario" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.371087, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+material/14 = null
+material/15 = null
+material/16 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.448998, 0 )
+shape = SubResource( 1 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 2 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/fire extinguisher_col.jpg-c1bdc7c2e9f103d452564ef340859156.s3tc.stex"
-path.etc2="res://.import/fire extinguisher_col.jpg-c1bdc7c2e9f103d452564ef340859156.etc2.stex"
+path.s3tc="res://.import/Waluigi_hat.png-ba20838fb7fe341038322f50100c4a1e.s3tc.stex"
+path.etc2="res://.import/Waluigi_hat.png-ba20838fb7fe341038322f50100c4a1e.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/fireextinguisher/fire extinguisher_col.jpg"
-dest_files=[ "res://.import/fire extinguisher_col.jpg-c1bdc7c2e9f103d452564ef340859156.s3tc.stex", "res://.import/fire extinguisher_col.jpg-c1bdc7c2e9f103d452564ef340859156.etc2.stex" ]
+source_file="res://models/waluigi/Waluigi_hat.png"
+dest_files=[ "res://.import/Waluigi_hat.png-ba20838fb7fe341038322f50100c4a1e.s3tc.stex", "res://.import/Waluigi_hat.png-ba20838fb7fe341038322f50100c4a1e.etc2.stex" ]
 
 [params]
 
