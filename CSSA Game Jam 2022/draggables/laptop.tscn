@@ -36,7 +36,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0859276, 0, 0 )
 shape = SubResource( 1 )
 
 [node name="Lowpoly_Notebook_2" type="MeshInstance" parent="RigidBody"]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+transform = Transform( -0.0401756, 0, 0.0915747, 0, 0.1, 0, -0.0915747, 0, -0.0401756, 0, 0, 0 )
 mesh = ExtResource( 5 )
 material/0 = SubResource( 2 )
 material/1 = SubResource( 3 )
