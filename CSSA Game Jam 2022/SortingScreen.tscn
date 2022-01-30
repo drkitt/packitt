@@ -59,8 +59,8 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="UI"]
-margin_right = 210.0
-margin_bottom = 40.0
+margin_right = 211.0
+margin_bottom = 37.0
 rect_pivot_offset = Vector2( 105, 20 )
 text = "Confirm packing!"
 __meta__ = {
