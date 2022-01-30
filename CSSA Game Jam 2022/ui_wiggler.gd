@@ -1,4 +1,4 @@
-extends Spatial
+extends TextureRect
 
 
 export(bool) var wiggling = true
@@ -11,4 +11,4 @@ var accumulator: float = 0
 func _process(delta: float) -> void:
 	if wiggling:
 		accumulator += delta
-		$Box.translation.y = amplitude * sin(2 * PI * frequency * accumulator + phase)
+		rect_position.y = amplitude * sin(2 * PI * frequency * accumulator + phase)
