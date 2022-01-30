@@ -12,3 +12,10 @@ func _ready() -> void:
 		add_child(draggable)
 	$Inactive.queue_free()
 
+
+func _on_StartButton_pressed():
+	for object in get_children():
+		var body = object.get_children()[0]
+		var draggable = body.get_node("Draggable")
+		DragDropController.deregister_draggable(draggable)
+		body.remove_child(draggable)

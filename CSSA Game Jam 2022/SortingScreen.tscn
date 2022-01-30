@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=1]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=2]
@@ -34,30 +34,33 @@ background_sky = SubResource( 1 )
 ambient_light_color = Color( 1, 1, 1, 1 )
 ambient_light_energy = 0.24
 
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 3.2, 3.2 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 3.2, 3.2 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1, 3.2, 3.2 )
+
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 1, 3.2, 3.2 )
 
-[sub_resource type="BoxShape" id=7]
-extents = Vector3( 1, 3.2, 3.2 )
-
-[sub_resource type="BoxShape" id=8]
-extents = Vector3( 1, 3.2, 3.2 )
-
-[sub_resource type="BoxShape" id=9]
-extents = Vector3( 1, 3.2, 3.2 )
-
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="SpatialMaterial" id=7]
 albedo_texture = ExtResource( 1 )
 normal_enabled = true
 normal_scale = 1.0
 normal_texture = ExtResource( 10 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=8]
 flags_transparent = true
 albedo_color = Color( 0, 0.666667, 0.717647, 0.329412 )
 
-[sub_resource type="BoxShape" id=4]
+[sub_resource type="BoxShape" id=9]
 extents = Vector3( 0.500198, 0.49684, 0.499274 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 4, 1, 4 )
 
 [node name="WorldEnvironment" type="WorldEnvironment"]
 environment = SubResource( 2 )
@@ -86,7 +89,7 @@ input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="SideCollisions/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.579807, 4.7176, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2" type="StaticBody" parent="SideCollisions"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.87814, 0, 0 )
@@ -94,7 +97,7 @@ input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="SideCollisions/StaticBody2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.579807, 4.7176, 0 )
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="StaticBody3" type="StaticBody" parent="SideCollisions"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 3.65963 )
@@ -102,7 +105,7 @@ input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="SideCollisions/StaticBody3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.579807, 4.7176, 0 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="StaticBody4" type="StaticBody" parent="SideCollisions"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -4.87801 )
@@ -110,23 +113,25 @@ input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="SideCollisions/StaticBody4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.579807, 4.7176, 0 )
-shape = SubResource( 9 )
+shape = SubResource( 6 )
 
 [node name="Wood_Table" type="MeshInstance" parent="."]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -2.98191, 0 )
 mesh = ExtResource( 2 )
-material/0 = SubResource( 3 )
-material/1 = SubResource( 5 )
+material/0 = SubResource( 7 )
+material/1 = SubResource( 8 )
 
 [node name="StaticBody" type="StaticBody" parent="Wood_Table"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Wood_Table/StaticBody"]
 transform = Transform( 0.66, 0, 0, 0, 0.493, 0, 0, 0, 0.661, 0, 0.226, 0 )
-shape = SubResource( 4 )
+shape = SubResource( 9 )
 
 [node name="Wiggler" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0 )
 wiggling = false
+frequency = 10.0
+amplitude = 0.05
 
 [node name="UI" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -168,10 +173,11 @@ __meta__ = {
 }
 
 [node name="Draggables" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.179324, 0 )
 script = ExtResource( 23 )
 
 [node name="Inactive" type="Spatial" parent="Draggables"]
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.224394, 0 )
 
 [node name="DraggableTable" parent="Draggables/Inactive" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4156, 1.86359, 0.79412 )
@@ -221,5 +227,18 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69431, 1.75406, 1.81918 )
 [node name="UtahTeapot" parent="Draggables/Inactive" instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19764, 1.87598, 0.252655 )
 
+[node name="Trapdoor" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0215981, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Trapdoor"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.882116, 0 )
+shape = SubResource( 10 )
+
+[node name="Debug camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80084, 11.6406 )
+projection = 1
+size = 2.96731
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="UI/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="UI/StartButton" to="Draggables" method="_on_StartButton_pressed"]

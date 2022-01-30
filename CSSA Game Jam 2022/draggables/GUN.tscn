@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://models/gun/Handgun_obj.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://draggables/drag_it.gd" type="Script" id=2]
 [ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=3]
+
+[sub_resource type="PhysicsMaterial" id=2]
+bounce = 0.66
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.0563292, 0.0399218, 0.00897152 )
@@ -11,6 +14,7 @@ extents = Vector3( 0.0563292, 0.0399218, 0.00897152 )
 script = ExtResource( 2 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
+physics_material_override = SubResource( 2 )
 
 [node name="Handgun_obj" type="MeshInstance" parent="RigidBody"]
 transform = Transform( 0.064, 0, 0, 0, 0.064, 0, 0, 0, 0.064, 0, 0.0327729, 0 )
