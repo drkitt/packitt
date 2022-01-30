@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://models/mario/mario.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=2]
 [ext_resource path="res://draggables/drag_it.gd" type="Script" id=3]
+
+[sub_resource type="PhysicsMaterial" id=2]
+bounce = 0.38
 
 [sub_resource type="CylinderShape" id=1]
 radius = 0.248046
@@ -12,6 +15,7 @@ height = 0.945176
 script = ExtResource( 3 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
+physics_material_override = SubResource( 2 )
 
 [node name="mario" type="MeshInstance" parent="RigidBody"]
 transform = Transform( 0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.371087, 0 )

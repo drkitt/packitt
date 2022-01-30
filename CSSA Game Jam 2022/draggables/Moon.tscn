@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=1]
 [ext_resource path="res://draggables/drag_it.gd" type="Script" id=2]
 [ext_resource path="res://models/moon/Diffuse_2K.png" type="Texture" id=3]
 [ext_resource path="res://models/moon/Moon 2K.obj" type="ArrayMesh" id=4]
+
+[sub_resource type="PhysicsMaterial" id=3]
+bounce = 0.43
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 3 )
@@ -15,6 +18,7 @@ radius = 0.439632
 script = ExtResource( 2 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
+physics_material_override = SubResource( 3 )
 
 [node name="Moon 2K" type="MeshInstance" parent="RigidBody"]
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.441, 0 )
