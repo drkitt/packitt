@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=1]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://models/table/Wood_Table_N.jpg" type="Texture" id=10]
 [ext_resource path="res://draggables/GUN.tscn" type="PackedScene" id=11]
 [ext_resource path="res://draggables/laptop.tscn" type="PackedScene" id=12]
+[ext_resource path="res://draggables/LifeCouldBeDream.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -73,3 +74,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51378, 1.72568, -1.01395 )
 
 [node name="GUN" parent="." instance=ExtResource( 11 )]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 1.46284, 1.78027, 1.8362 )
+
+[node name="Mario" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.440095, 1.72967, 1.93328 )
