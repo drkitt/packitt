@@ -6,7 +6,7 @@
 [ext_resource path="res://draggables/drag_it.gd" type="Script" id=4]
 
 [sub_resource type="PhysicsMaterial" id=3]
-bounce = 0.36
+bounce = 0.32
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )

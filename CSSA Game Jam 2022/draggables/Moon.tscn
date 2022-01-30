@@ -6,7 +6,7 @@
 [ext_resource path="res://models/moon/Moon 2K.obj" type="ArrayMesh" id=4]
 
 [sub_resource type="PhysicsMaterial" id=3]
-bounce = 0.43
+bounce = 0.36
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 3 )

@@ -6,7 +6,7 @@
 [ext_resource path="res://models/wii_u_hat/hat_wiiu_color.png" type="Texture" id=4]
 
 [sub_resource type="PhysicsMaterial" id=3]
-bounce = 0.32
+bounce = 0.24
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 4 )
