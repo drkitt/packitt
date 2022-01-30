@@ -39,6 +39,9 @@ extents = Vector3( 0.500198, 0.49684, 0.499274 )
 environment = SubResource( 1 )
 script = ExtResource( 21 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.2898, 0.957087, 0, -0.957087, 0.2898, 0, 6.30908, 1.96683 )
 
@@ -77,11 +80,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="UI"]
+[node name="StartButton" type="Button" parent="UI"]
 margin_right = 211.0
 margin_bottom = 37.0
 rect_pivot_offset = Vector2( 105, 20 )
 text = "Confirm packing!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndScreen" type="Control" parent="UI"]
+visible = false
+margin_right = 211.0
+margin_bottom = 37.0
+
+[node name="Label" type="Label" parent="UI/EndScreen"]
+margin_left = 42.0
+margin_top = -446.0
+margin_right = 91.0
+margin_bottom = -393.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Yay you did it :)"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,4 +151,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69431, 1.75406, 1.81918 )
 [node name="UtahTeapot" parent="." instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19764, 1.87598, 0.252655 )
 
-[connection signal="pressed" from="UI/Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="UI/StartButton" to="." method="_on_StartButton_pressed"]
