@@ -4,12 +4,16 @@
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=2]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=3]
 [ext_resource path="res://draggables/drag_it.gd" type="Script" id=4]
+[ext_resource path="res://models/table/Wood_Table_N.jpg" type="Texture" id=5]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.330296, 0.229742, 0.332307 )
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=3]
 flags_transparent = true

@@ -1,0 +1,47 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=1]
+[ext_resource path="res://models/waluigi/Waluigi_hat.png" type="Texture" id=2]
+[ext_resource path="res://models/waluigi/Waluigi_body.png" type="Texture" id=3]
+[ext_resource path="res://models/waluigi/Waluigi_eye.png" type="Texture" id=4]
+[ext_resource path="res://models/waluigi/Waluigi.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=6]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CylinderShape" id=5]
+radius = 0.349222
+height = 0.624807
+
+[node name="Waluigi" type="Spatial"]
+script = ExtResource( 6 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="Waluigi" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
+mesh = ExtResource( 5 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+material/2 = SubResource( 3 )
+material/3 = SubResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12504e-06, 0.326307, -0.000258923 )
+shape = SubResource( 5 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 1 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://models/penguin/PenguinBaseMesh.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://models/penguin/Penguin Diffuse Color.png" type="Texture" id=2]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=3]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.203555
+height = 0.602096
+
+[node name="Penguin" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="PenguinBaseMesh" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.294856, 0 )
+shape = SubResource( 2 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 3 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]

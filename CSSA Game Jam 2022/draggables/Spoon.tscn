@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/spoon.fbx" type="PackedScene" id=1]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=2]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=3]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.100058
+height = 0.748835
+
+[node name="Spoon" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="spoon" parent="RigidBody" instance=ExtResource( 1 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0171834, 0 )
+shape = SubResource( 1 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 2 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]
