@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/gun/Handgun_obj.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=2]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.0563292, 0.0399218, 0.00897152 )
+
+[node name="GUN" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="Handgun_obj" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 0.064, 0, 0, 0, 0.064, 0, 0, 0, 0.064, 0, 0.0327729, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0341055, 0 )
+shape = SubResource( 1 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 3 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]
