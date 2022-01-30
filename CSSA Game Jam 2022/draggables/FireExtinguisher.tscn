@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://models/fireextinguisher/fire extinguisher_nor.jpg" type="Texture" id=1]
+[ext_resource path="res://models/fireextinguisher/fire extinguisher_col.jpg" type="Texture" id=2]
+[ext_resource path="res://models/fireextinguisher/Fireextinguisher_BI.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://draggables/drag_it.gd" type="Script" id=4]
+[ext_resource path="res://addons/DragDrop3D/Draggable.gd" type="Script" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 1 )
+
+[sub_resource type="CylinderShape" id=2]
+radius = 0.0403125
+height = 0.330087
+
+[node name="FireExtinguisher" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+
+[node name="Fireextinguisher_BI" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0 )
+mesh = ExtResource( 3 )
+material/0 = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.173145, 0 )
+shape = SubResource( 2 )
+
+[node name="Draggable" type="Node" parent="RigidBody"]
+script = ExtResource( 5 )
+
+[connection signal="drag_move" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_move"]
+[connection signal="drag_start" from="RigidBody/Draggable" to="." method="_on_Draggable_drag_start"]

@@ -11,6 +11,7 @@ radius = 0.241993
 script = ExtResource( 3 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.239588, 0 )
 
 [node name="eyeball" parent="RigidBody" instance=ExtResource( 1 )]
 transform = Transform( 0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0 )
