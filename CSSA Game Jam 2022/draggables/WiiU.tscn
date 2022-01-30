@@ -17,7 +17,7 @@ script = ExtResource( 2 )
 [node name="RigidBody" type="RigidBody" parent="."]
 
 [node name="hat_wiiu_model" type="MeshInstance" parent="RigidBody"]
-transform = Transform( 0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0.163448, -0.109513 )
+transform = Transform( 0.005, 0, 0, 0, 0.00376587, 0.00328911, 0, -0.00328911, 0.00376587, 0, -0.0477034, -0.109513 )
 mesh = ExtResource( 3 )
 material/0 = SubResource( 1 )
 
