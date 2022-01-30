@@ -127,8 +127,17 @@ material/1 = SubResource( 8 )
 transform = Transform( 0.66, 0, 0, 0, 0.493, 0, 0, 0, 0.661, 0, 0.226, 0 )
 shape = SubResource( 9 )
 
+[node name="Area" type="Area" parent="Wood_Table"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0122784, 0 )
+input_ray_pickable = false
+monitoring = false
+
+[node name="CollisionShape" type="CollisionShape" parent="Wood_Table/Area"]
+transform = Transform( 0.66, 0, 0, 0, 0.493, 0, 0, 0, 0.661, 0, 0.232, 0 )
+shape = SubResource( 9 )
+
 [node name="Wiggler" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.22843, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.67493, 0 )
 wiggling = false
 frequency = 10.0
 amplitude = 0.05
@@ -247,6 +256,7 @@ projection = 1
 size = 2.96731
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Wood_Table/Area" to="." method="_on_Area_body_entered"]
 [connection signal="pressed" from="UI/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="UI/StartButton" to="Draggables" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="UI/EndScreen/ReplayButton" to="." method="_on_ReplayButton_pressed"]
