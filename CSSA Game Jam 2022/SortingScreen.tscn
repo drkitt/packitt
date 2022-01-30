@@ -161,10 +161,12 @@ margin_right = 211.0
 margin_bottom = 37.0
 
 [node name="Label" type="Label" parent="UI/EndScreen"]
-margin_left = 42.0
-margin_top = -446.0
-margin_right = 91.0
-margin_bottom = -393.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -51.5
+margin_top = -56.0
+margin_right = 45.5
+margin_bottom = -3.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Yay you did it :)"
 align = 1
