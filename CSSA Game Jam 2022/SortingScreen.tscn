@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://models/table/Wood_Table_C_2.jpg" type="Texture" id=1]
 [ext_resource path="res://models/table/Wood_Table.obj" type="ArrayMesh" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://draggables/Penguin.tscn" type="PackedScene" id=15]
 [ext_resource path="res://draggables/Waluigi.tscn" type="PackedScene" id=16]
 [ext_resource path="res://draggables/WiiU.tscn" type="PackedScene" id=17]
+[ext_resource path="res://draggables/Spoon.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 1, 1, 1, 1 )
@@ -93,3 +94,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72405, 2.48336 )
 
 [node name="WiiU" parent="." instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44134, 1.73597, 1.22874 )
+
+[node name="Spoon" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.869836, 1.78445, 2.49239 )
