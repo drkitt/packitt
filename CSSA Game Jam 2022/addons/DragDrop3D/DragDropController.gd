@@ -14,6 +14,11 @@ func register_draggable(node):
 	node.connect("drag_start",self,"_drag_start")
 	node.connect("drag_stop",self,"_drag_stop")
 
+func deregister_draggable(node):
+	draggables.erase(node)
+	node.disconnect("drag_start",self,"_drag_start")
+	node.disconnect("drag_stop",self,"_drag_stop")
+
 func _drag_start(node):
 	draging = node
 	camera = get_tree().get_root().get_camera()
