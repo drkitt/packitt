@@ -20,6 +20,10 @@ func _on_StartButton_pressed() -> void:
 func _on_Timer_timeout():
 	$Wiggler.wiggling = false
 	$UI/EndScreen.show()
+	$UI/EndScreen/Label.text = """
+	yay you did it :)
+	Your score is %d / 5.
+	""" % score
 	$AudioStreamPlayer.stream = preload("res://music/joshua-mclean_celebrate.ogg")
 	$AudioStreamPlayer.volume_db = -15
 	$AudioStreamPlayer.play()
