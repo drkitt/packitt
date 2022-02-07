@@ -10,9 +10,6 @@ func _on_StartButton_pressed() -> void:
 	$AudioStreamPlayer.stream = preload("res://music/francis-battle.mp3")
 	$AudioStreamPlayer.volume_db = -15
 	$AudioStreamPlayer.play()
-#	$Trapdoor/CollisionShape.disabled = true
-#	$Trapdoor.queue_free()
-	$Trapdoor.translation.y = -1
 	$Wood_Table/Area.monitoring = true
 	$Draggables.translate(Vector3(0,0.01,0))
 
