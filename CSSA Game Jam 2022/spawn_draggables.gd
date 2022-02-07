@@ -8,6 +8,7 @@ func _ready() -> void:
 	for i in num_draggables_to_spawn:
 		var inactive_draggables: Array = $Inactive.get_children()
 		var draggable = inactive_draggables[randi() % inactive_draggables.size()]
+		draggable.get_node('RigidBody').can_sleep = false
 		$Inactive.remove_child(draggable)
 		add_child(draggable)
 	$Inactive.queue_free()
