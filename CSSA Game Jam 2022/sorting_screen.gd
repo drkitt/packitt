@@ -33,7 +33,6 @@ func _on_Timer_timeout():
 func _on_Area_body_entered(body):
 	if not body in fell and body.get_parent() in $Draggables.get_children():
 		score -= 1
-		print(score)
 		fell.append(body)
 
 
